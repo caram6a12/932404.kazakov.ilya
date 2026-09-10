@@ -4,7 +4,7 @@
     --accent-color: #6a4a9a; /*акцентный цвет(кнопки, рамки, волны)*/
     --section-color: #2a1a50;/*цвет секций и подвала*/
     --item-color: #3a2a6a;   /*пункты списков*/
-    --input-bg: #1c0e52;     /*цвет полей ввода в форме*/
+    --input-bg: #4b307c;     /*цвет полей ввода в форме*/
     --text-color: #cbc0e7;   /*цвет основного текста*/
     --heading-color: #b89eff; /*цвет заголовков*/
     --font-family: Arial;
@@ -234,4 +234,78 @@ button:active {
     justify-content: center;  
     border-radius: 8px;
     font-weight: bold;
+}
+
+/*==========лаб3=======*/
+.nav-menu {
+    display: flex;        /*пункты в ряд*/
+    flex-wrap: wrap;      /*перенос на узком экране*/
+    gap: 10px;           
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--accent-color);
+}
+.nav-menu a {
+    color: var(--heading-color);
+    text-decoration: none;   /*без подчёркивания*/
+    padding: 6px 12px;      /*кликабельная зона*/
+    background-color: var(--item-color);  /*фон пункта*/
+    border-radius: 8px;
+}
+
+/*релизы*/
+.cards {
+    display: flex;        /*включаем флексбокс*/
+    flex-wrap: wrap;      /*перенос, если не влезают*/
+    gap: 20px; 
+}
+.card {
+    flex: 1 1 22%;        /*по 4 в ряд на пк*/
+    background-color: var(--item-color);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/*grid пк*/
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /*3 колонки на пк*/
+    gap: 20px;
+}
+.equip {
+    background-color: var(--item-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*планшет*/
+@media (max-width: 750px) {
+    .card { flex: 1 1 48%; }       /*карточки по 2*/
+    .dashboard { grid-template-columns: repeat(2, 1fr); }  /*2 колонки*/
+}
+
+/*мобильный*/
+@media (max-width: 480px) {
+    .card { flex: 1 1 100%; }
+    .dashboard { grid-template-columns: 1fr; } 
+}
+/*обложки*/
+.cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;  /*квадратная обложка*/
+    object-fit: cover;    /*обрезать вместо искажения*/
+    border-radius: 8px;
+    display: block;
+    margin: 0;            /*убрать сдвиг от общего правила img*/
+}
+
+/*фото оборудования*/
+.device-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0;
 }

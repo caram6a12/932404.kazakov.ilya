@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Казаков Илья - Музыкант и звукорежиссёр</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul.skills {
+            list-style: none;
+            padding-left: 30px;
+        }
+        ul.skills li {
+            padding-left: 28px;
+            position: relative;
+        }
+        ul.skills li::before {
+            content: "▸";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="#releases">Релизы</a> 
+            <a href="#equipment">Оборудование</a>
+            <a href="#contact">Связь</a>
+        </nav>
+        <h1>Казаков Илья -<br>Музыкант и звукорежиссёр</h1>
+    </header>
+
+    <main>
+        <img src="myphoto.jpg" alt="Фото" width="300" height="300">
+
+        <section id="releases">
+            <h2>Мои релизы</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="фото/обложка1.jpg" alt="Обложка релиза «Первый»" class="cover">
+                    <h3>Сингл «Первый»</h3>
+                    <p><time datetime="2024">2024</time></p>
+                    <p>Жанр: электроника</p>
+                </article>
+                <article class="card">
+                    <img src="фото/обложка2.jpg" alt="Обложка альбома «Студийные записи»" class="cover">
+                    <h3>Альбом «Студийные записи»</h3>
+                    <p><time datetime="2023">2023</time></p>
+                    <p>Жанр: рок</p>
+                </article>
+                <article class="card">
+                    <img src="фото/обложка3.jpg" alt="Обложка релиза «Второй»" class="cover">
+                    <h3>Сингл «Второй»</h3>
+                    <p><time datetime="2025">2025</time></p>
+                    <p>Жанр: инди</p>
+                </article>
+                <article class="card">
+                    <img src="фото/обложка4.jpg" alt="Обложка альбома «Миксы»" class="cover">
+                    <h3>Альбом «Миксы»</h3>
+                    <p><time datetime="2022">2022</time></p>
+                    <p>Жанр: техно</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="equipment">
+            <h2>Студийное оборудование</h2>
+            <div class="dashboard">
+                <div class="equip">
+                    <img src="фото/микрофон.png" alt="Микрофон" class="device-photo">
+                    <h3>Микрофон</h3>
+                    <p>запись голоса</p>
+                </div>
+                <div class="equip">
+                    <img src="фото/MIDI-клавиатура.jpg" alt="MIDI-клавиатура" class="device-photo">
+                    <h3>MIDI-клавиатура</h3>
+                    <p>ввод нот</p>
+                </div>
+                <div class="equip">
+                    <img src="фото/Аудиоинтерфейс.jpg" alt="Аудиоинтерфейс" class="device-photo">
+                    <h3>Аудиоинтерфейс</h3>
+                    <p>подключение звука</p>
+                </div>
+                <div class="equip">
+                    <img src="фото/Наушники.jpg" alt="Наушники" class="device-photo">
+                    <h3>Наушники</h3>
+                    <p>прослушивание</p>
+                </div>
+                <div class="equip">
+                    <img src="фото/Мониторы.jpg" alt="Студийные мониторы" class="device-photo">
+                    <h3>Мониторы</h3>
+                    <p>контроль сведения</p>
+                </div>
+                <div class="equip">
+                    <img src="фото/контроллер-daw.jpg" alt="Контроллер DAW" class="device-photo">
+                    <h3>Контроллер</h3>
+                    <p>управление DAW</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="row">
+        <section>
+            <h2>Проекты</h2>
+            <ol>
+                <li class="project-title">Кавер-версии</li>
+                <li class="project-title">Собственные композиции</li>
+                <li class="project-title">Ремиксы</li>
+                <li class="project-title">Саунд-дизайн</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Навыки</h2>
+            <ul class="skills">
+                <li>игра на инструменте</li>
+                <li>знание DAW</li>
+                <li>сведение треков</li>
+            </ul>
+        </section>
+        </div>
+
+        <aside>
+            <h2>Любимый инструмент</h2>
+            <p>🎸 Электрогитара</p>
+        </aside>
+
+        <section id="contact">
+            <h2>Связь</h2>
+            <form style="display: flex; flex-direction: column; gap: 10px;">
+                <label>Имя:
+                    <input type="text" name="user_name" placeholder="Введите ваше имя">
+                </label>
+                <label>Email:
+                    <input type="email" name="user_email" placeholder="example@mail.ru">
+                </label>
+                <label>Сообщение:
+                    <textarea name="user_message" placeholder="Напишите сообщение"></textarea>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <a href="#">Мой сайт</a> |
+            <a href="#">VK</a> |
+            <a href="#">Telegram</a>
+        </p>
+        <p>&copy; 2026 Казаков Илья. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
