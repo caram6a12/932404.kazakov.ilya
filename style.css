@@ -11,7 +11,7 @@
     --font-family: Arial;
 }
 * {
-    box-sizing: border-box;  /*чтобы рамка входила в ширину*/
+    box-sizing: border-box;
 }
 
 /*страница*/
@@ -84,39 +84,40 @@ footer {
     border-top: 1px solid var(--accent-color);
 }
 
-/*ссылки и их состояния (порядок правил: link, visited, hover, active)*/
+/*состояния ссылки*/
 a {
-    color: var(--heading-color);  /*обычная ссылка*/
+    color: var(--heading-color);
 }
 a:visited {
-    color: #b197fc;    /*посещённая - светлый фиолетовый, контраст > 4.5:1*/
+    color: #ffffff;
 }
 a:hover {
-    color: #d5c8ff;    /*при наведении светлеет*/
+    color: #d5c8ff;
 }
 a:active {
-    color: #a5b4fc;    /*при нажатии - светлый голубой, контраст > 4.5:1*/
+    color: #a5b4fc;
 }
 a:focus {
-    outline: 2px dashed var(--accent-light);  /*фокус с Tab - светлая обводка*/
-    outline-offset: 1px;                      /*чтобы обводка не прилипала*/
+    outline: 2px dashed var(--accent-light);
+    outline-offset: 1px;
 }
 
 /*волны возле названий проектов*/
 .project-title::before,
 .project-title::after {
-    content: "▂▃▅▇";          /*сами волны*/
-    color: var(--accent-light);   /*цвет волн - светлый, контраст > 4.5:1*/
-    display: inline-block;        /*чтобы margin работали*/
-    margin: 0 10px;               /*сбоку от названия*/
-    transition: color 0.3s, transform 0.3s;   /*плавно меняются*/
+    content: "▂▃▅▇";
+    color: #a78bfa;
+    display: inline-block;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
 }
 
 /*при наведении волны меняют цвет и дрожат*/
 .project-title:hover::before,
 .project-title:hover::after {
-    color: #e9d5ff;    /*новый цвет волн - светлый оттенок на тёмном фоне*/
-    animation: shake 0.4s ease-in-out infinite;  /*дрожание бесконечно*/
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);   /*лёгкое свечение*/
+    animation: shake 0.4s ease-in-out infinite;
 }
 
 /*анимация дрожания*/
@@ -130,7 +131,7 @@ a:focus {
 
 /*подписи у формы*/
 form label {
-    display: block; /*каждая с новой строки*/
+    display: block;
     margin: 10px 0 5px;
 }
 
@@ -139,10 +140,10 @@ input, textarea {
     width: 100%; 
     box-sizing: border-box; 
     padding: 8px;              
-    border: 1px solid var(--accent-light);  /*рамка - светлая, чтобы поле было видно (контраст > 3:1)*/
-    background-color: var(--input-bg);       /*фон поля*/
-    color: var(--text-color);                /*цвет текста который вводишь*/
-    font-size: 1rem;            /*размер текста*/
+    border: 1px solid var(--accent-light);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
     font-family: inherit;
 }
 
@@ -162,7 +163,7 @@ button {
     cursor: pointer;   /*курсор - рука*/
     font-size: 1rem;
     font-family: inherit;   
-    transition: background-color 0.2s, transform 0.1s;  /*плавно меняется*/
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 /*кнопка при наведении светлее*/
@@ -190,23 +191,23 @@ button:focus {
 }
 
 .position-example {
-    flex: 1;        /*все три блока одинаковой ширины*/
-    height: 160px;      /*одинаковая высота*/
+    flex: 1;      
+    height: 160px;
     background-color: var(--input-bg);
-    border: 2px solid var(--accent-light);   /*рамка карточки - светлая, видна на фоне (> 3:1)*/
+    border: 2px solid var(--accent-light);
     border-radius: 8px;
     padding: 10px;
     margin: 16px 0;
 }
 
-/*static - явно показываем тип позиционирования (дефолтное поведение)*/
+/*static - явно показываем тип позиционирования*/
 .position-example.static {
     position: static;
 }
 
 /*relative - контейнер становится точкой отсчёта для absolute внутри*/
 .position-example.relative {
-    position: relative;   /*контейнер для absolute*/
+    position: relative;
 }
 
 /*текст во второй карточке не заходит под квадрат в правом верхнем углу*/
@@ -230,10 +231,10 @@ button:focus {
 
 .absolute-block {
     position: absolute;   /*выпадает из потока*/
-    top: 15px;            /*сверху*/
-    right: 15px;          /*справа*/
-    width: 110px;         /*ширина*/
-    height: 80px;         /*высота*/
+    top: 15px;
+    right: 15px;
+    width: 110px;
+    height: 80px;  
     background-color: var(--accent-color);
     color: #ffffff;          
     display: flex;               
