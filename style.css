@@ -1,0 +1,272 @@
+/*все цвета и шрифты*/
+:root {
+    --primary-color: #0d1b3e; /*основной цвет страницы - тёмно-синий*/
+    --accent-color: #7c3aed;   /*акцент - фиолетовый (кнопки, рамки)*/
+    --accent-light: #c4b5fd;   /*светлый фиолетовый (текстовые акценты, обводки)*/
+    --section-color: #14264f;  /*цвет секций и подвала*/
+    --item-color: #1c3162;     /*пункты списков*/
+    --input-bg: #24406f;       /*цвет полей ввода в форме*/
+    --text-color: #cbc0e7;   /*цвет основного текста*/
+    --heading-color: #b89eff; /*цвет заголовков*/
+    --font-family: Arial;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*страница*/
+body {
+    margin: 40px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-family); 
+    line-height: 1.6;
+}
+/*блоки навыки и проекты*/
+.row {
+    display: flex;
+    gap: 20px;
+}
+.row section {
+    flex:  1;
+    min-width: 0;
+}
+
+/*секции и боковая панель*/
+section, aside {
+    background-color: var(--section-color);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+/*отступы фото*/
+img {
+    margin:  0  0  20px 60px; 
+}
+/*аватар - не выходит за пределы экрана*/
+.avatar {
+    max-width: 100%;
+    height: auto;
+}
+/*заголовки*/
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+h1 {
+    margin-left: 30px;
+}
+
+/*ненумерованный список*/
+ul {
+    padding-left: 30px;
+    list-style-type: disc;
+}
+
+/*нумерованный список*/
+ol {
+    padding-left: 30px;
+    list-style-type: decimal;
+}
+
+/*пункты списков*/
+li {
+    background-color: var(--item-color);
+    padding: 6px 14px;
+    margin: 4px 0;
+    border-radius: 10px;
+}
+
+/*боковая панель*/
+aside {
+    text-align: center;
+    border: 1px solid var(--accent-color);
+}
+
+/*подвал*/
+footer {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--section-color); 
+    text-align: center; 
+    border-top: 1px solid var(--accent-color);
+}
+
+/*состояния ссылки*/
+a {
+    color: var(--heading-color);
+}
+a:visited {
+    color: #ffffff;
+}
+a:hover {
+    color: #d5c8ff;
+}
+a:active {
+    color: #a5b4fc;
+}
+a:focus {
+    outline: 2px dashed var(--accent-light);
+    outline-offset: 1px;
+}
+
+/*волны возле названий проектов*/
+.project-title::before,
+.project-title::after {
+    content: "▂▃▅▇";
+    color: #a78bfa;
+    display: inline-block;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/*при наведении волны меняют цвет и дрожат*/
+.project-title:hover::before,
+.project-title:hover::after {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);   /*лёгкое свечение*/
+    animation: shake 0.4s ease-in-out infinite;
+}
+
+/*анимация дрожания*/
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-4px); }
+    50%  { transform: translateX(4px); }  
+    75%  { transform: translateX(-4px); } 
+    100% { transform: translateX(0); }   
+}
+
+/*подписи у формы*/
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/*поля ввода*/
+input, textarea {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 8px;              
+    border: 1px solid var(--accent-light);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/*обводка при фокусе поля воода*/
+input:focus, textarea:focus {
+    outline: 2px solid var(--heading-color);
+}
+
+/*цвет текста-подсказки в полях*/
+input::placeholder,
+textarea::placeholder {
+    color: #aeb8d6;
+}
+
+/*кнопка*/
+button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none; 
+    margin-top: 10px;
+    border-radius: 6px; 
+    cursor: pointer;   /*курсор - рука*/
+    font-size: 1rem;
+    font-family: inherit;   
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/*кнопка при наведении светлее*/
+button:hover {
+    background-color: #7c57cc;
+}
+
+/*кнопка при нажатии уменьшается*/
+button:active {
+    transform: scale(0.98);
+}
+
+/*кнопка при фокусе - заметная светлая обводка*/
+button:focus {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 2px;
+}
+
+/*==========лаб3=======*/
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;           
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--accent-color);
+}
+.nav-menu a {
+    color: var(--heading-color);
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: var(--item-color);
+    border-radius: 8px;
+}
+
+/*релизы*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+.card {
+    flex: 1 1 calc(25% - 15px);
+    background-color: var(--item-color);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/*grid пк*/
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.equip {
+    background-color: var(--item-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*планшет*/
+@media (max-width: 750px) {
+    body { margin: 20px; }
+    .card { flex: 1 1 calc(50% - 10px); } 
+    .dashboard { grid-template-columns: repeat(2, 1fr); }
+}
+
+/*мобильный*/
+@media (max-width: 480px) {
+    body { margin: 15px; }                          
+    .avatar { margin-left: 0; }                     
+    .card { flex: 1 1 100%; }
+    .dashboard { grid-template-columns: 1fr; } 
+}
+/*обложки*/
+.cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0;
+}
+
+/*фото оборудования*/
+.device-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0;
+}
