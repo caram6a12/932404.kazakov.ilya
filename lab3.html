@@ -132,15 +132,15 @@
 
         <section id="contact">
             <h2>Связь</h2>
-            <form style="display: flex; flex-direction: column; gap: 10px;">
-                <label>Имя:
-                    <input type="text" name="user_name" placeholder="Введите ваше имя">
+            <form action="#" method="post">
+                <label for="user_name">Имя:
+                    <input type="text" id="user_name" name="user_name" placeholder="Введите ваше имя">
                 </label>
-                <label>Email:
-                    <input type="email" name="user_email" placeholder="example@mail.ru">
+                <label for="user_email">Email:
+                    <input type="email" id="user_email" name="user_email" placeholder="example@mail.ru">
                 </label>
-                <label>Сообщение:
-                    <textarea name="user_message" placeholder="Напишите сообщение"></textarea>
+                <label for="user_message">Сообщение:
+                    <textarea id="user_message" name="user_message" placeholder="Напишите сообщение"></textarea>
                 </label>
                 <button type="submit">Отправить</button>
             </form>

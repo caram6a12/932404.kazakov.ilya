@@ -25,6 +25,7 @@ body {
 /*блоки навыки и проекты*/
 .row {
     display: flex;
+    flex-wrap: wrap;   /*на узких экранах секции переносятся, а не сжимаются*/
     gap: 20px;
 }
 .row section {
@@ -38,12 +39,9 @@ section, aside {
     padding: 15px 20px;
     margin-bottom: 20px;
 }
-/*отступы фото*/
-img {
-    margin:  0  0  20px 60px; 
-}
-/*аватар - не выходит за пределы экрана*/
+/*отступы фото - только у аватара*/
 .avatar {
+    margin: 0 0 20px 60px;
     max-width: 100%;
     height: auto;
 }
@@ -141,6 +139,13 @@ form label {
     margin: 10px 0 5px;
 }
 
+/*форма связи - вертикальное расположение полей*/
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /*поля ввода*/
 input, textarea {
     width: 100%; 
@@ -218,7 +223,7 @@ button:focus {
     gap: 20px; 
 }
 .card {
-    flex: 1 1 calc(25% - 15px);
+    flex: 1 1 calc((100% - 60px) / 4); /*ровно 4 колонки с учётом трёх gap по 20px*/
     background-color: var(--item-color);
     border-radius: 10px;
     padding: 15px;
@@ -240,7 +245,7 @@ button:focus {
 /*планшет*/
 @media (max-width: 750px) {
     body { margin: 20px; }
-    .card { flex: 1 1 calc(50% - 10px); } 
+    .card { flex: 1 1 calc((100% - 20px) / 2); } /*ровно 2 колонки с одним gap*/ 
     .dashboard { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -249,6 +254,7 @@ button:focus {
     body { margin: 15px; }                          
     .avatar { margin-left: 0; }                     
     .card { flex: 1 1 100%; }
+    .row section { flex: 1 1 100%; }  /*навыки и проекты - по одной колонке*/
     .dashboard { grid-template-columns: 1fr; } 
 }
 /*обложки*/
