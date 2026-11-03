@@ -276,3 +276,49 @@ button:focus {
     display: block;
     margin: 0;
 }
+/*==========лаб5=======*/
+
+.playlist-controls input {           
+    width: auto;
+    border-radius: 6px;
+}
+
+#playlist-list {
+    list-style: none; 
+    padding-left: 0;
+}
+#playlist-list li {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    background-color: var(--item-color);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 6px 0;
+}
+.track-title {
+    flex: 1;
+    font-weight: bold;
+}
+
+.track-fav {
+    width: auto;
+    cursor: pointer;
+}
+.track-delete {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+body.light-theme {
+    --primary-color: #e8e2f5;
+    --section-color: #f4f1fa;
+    --item-color: #d9cfee;
+    --input-bg: #cfc0ec;
+    --text-color: #2a1a50;
+    --heading-color: #5a3aa8
+}
