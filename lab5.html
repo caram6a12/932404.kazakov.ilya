@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Казаков Илья - Музыкант и звукорежиссёр</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -32,35 +31,35 @@
             <a href="#equipment">Оборудование</a>
             <a href="#contact">Связь</a>
         </nav>
-        <h1>Казаков Илья — музыкант и звукорежиссёр</h1>
+        <h1>Казаков Илья -<br>Музыкант и звукорежиссёр</h1>
     </header>
 
     <main>
-        <img src="images/cat-avatar.jpg" alt="Портрет: серый полосатый кот с голубыми глазами" class="avatar" width="300" height="300">
+        <img src="фото/myphoto.jpg" alt="Фото" width="300" height="300">
 
         <section id="releases">
             <h2>Мои релизы</h2>
             <div class="cards">
                 <article class="card">
-                    <img src="images/cover1.jpg" alt="Обложка релиза «Первый»" class="cover">
+                    <img src="фото/обложка1.jpg" alt="Обложка релиза «Первый»" class="cover">
                     <h3>Сингл «Первый»</h3>
                     <p><time datetime="2024">2024</time></p>
                     <p>Жанр: электроника</p>
                 </article>
                 <article class="card">
-                    <img src="images/cover2.jpg" alt="Обложка альбома «Студийные записи»" class="cover">
+                    <img src="фото/обложка2.jpg" alt="Обложка альбома «Студийные записи»" class="cover">
                     <h3>Альбом «Студийные записи»</h3>
                     <p><time datetime="2023">2023</time></p>
                     <p>Жанр: рок</p>
                 </article>
                 <article class="card">
-                    <img src="images/cover3.jpg" alt="Обложка релиза «Второй»" class="cover">
+                    <img src="фото/обложка3.jpg" alt="Обложка релиза «Второй»" class="cover">
                     <h3>Сингл «Второй»</h3>
                     <p><time datetime="2025">2025</time></p>
                     <p>Жанр: инди</p>
                 </article>
                 <article class="card">
-                    <img src="images/cover4.jpg" alt="Обложка альбома «Миксы»" class="cover">
+                    <img src="фото/обложка4.jpg" alt="Обложка альбома «Миксы»" class="cover">
                     <h3>Альбом «Миксы»</h3>
                     <p><time datetime="2022">2022</time></p>
                     <p>Жанр: техно</p>
@@ -72,32 +71,32 @@
             <h2>Студийное оборудование</h2>
             <div class="dashboard">
                 <div class="equip">
-                    <img src="images/microphone.png" alt="Микрофон" class="device-photo">
+                    <img src="фото/микрофон.png" alt="Микрофон" class="device-photo">
                     <h3>Микрофон</h3>
                     <p>запись голоса</p>
                 </div>
                 <div class="equip">
-                    <img src="images/midi-keyboard.jpg" alt="MIDI-клавиатура" class="device-photo">
+                    <img src="фото/MIDI-клавиатура.jpg" alt="MIDI-клавиатура" class="device-photo">
                     <h3>MIDI-клавиатура</h3>
                     <p>ввод нот</p>
                 </div>
                 <div class="equip">
-                    <img src="images/audio-interface.jpg" alt="Аудиоинтерфейс" class="device-photo">
+                    <img src="фото/Аудиоинтерфейс.jpg" alt="Аудиоинтерфейс" class="device-photo">
                     <h3>Аудиоинтерфейс</h3>
                     <p>подключение звука</p>
                 </div>
                 <div class="equip">
-                    <img src="images/headphones.jpg" alt="Наушники" class="device-photo">
+                    <img src="фото/Наушники.jpg" alt="Наушники" class="device-photo">
                     <h3>Наушники</h3>
                     <p>прослушивание</p>
                 </div>
                 <div class="equip">
-                    <img src="images/monitors.jpg" alt="Студийные мониторы" class="device-photo">
+                    <img src="фото/Мониторы.jpg" alt="Студийные мониторы" class="device-photo">
                     <h3>Мониторы</h3>
                     <p>контроль сведения</p>
                 </div>
                 <div class="equip">
-                    <img src="images/daw-controller.jpg" alt="Контроллер DAW" class="device-photo">
+                    <img src="фото/контроллер-daw.jpg" alt="Контроллер DAW" class="device-photo">
                     <h3>Контроллер</h3>
                     <p>управление DAW</p>
                 </div>
@@ -132,28 +131,44 @@
 
         <section id="contact">
             <h2>Связь</h2>
-            <form action="#" method="post">
-                <label for="user_name">Имя:
-                    <input type="text" id="user_name" name="user_name" placeholder="Введите ваше имя">
+            <form style="display: flex; flex-direction: column; gap: 10px;">
+                <label>Имя:
+                    <input type="text" name="user_name" placeholder="Введите ваше имя">
                 </label>
-                <label for="user_email">Email:
-                    <input type="email" id="user_email" name="user_email" placeholder="example@mail.ru">
+                <label>Email:
+                    <input type="email" name="user_email" placeholder="example@mail.ru">
                 </label>
-                <label for="user_message">Сообщение:
-                    <textarea id="user_message" name="user_message" placeholder="Напишите сообщение"></textarea>
+                <label>Сообщение:
+                    <textarea name="user_message" placeholder="Напишите сообщение"></textarea>
                 </label>
                 <button type="submit">Отправить</button>
             </form>
+        </section>
+
+        <section id="playlist">
+            <h2>Плейлист</h2>
+            <div class="playlist-controls">
+                <input type="text" id="track-name" placeholder="Название трека">
+                <input type="text" id="track-time" placeholder="Длительность (3:45)">
+                <button type="button" id="add-track">Добавить трек</button>
+                <button type="button" id="clear-tracks">Очистить плейлист</button>
+                <button type="button" id="hide-playlist">Скрыть плейлист</button>
+                <button type="button" id="toggle-theme">Переключить тему</button>
+            </div>
+            <ul id="playlist-list"></ul>
         </section>
 
     </main>
 
     <footer>
         <p>
-            <a href="https://github.com/caram6a12" class="footer-link">Мой GitHub</a> 
+            <a href="#">Мой сайт</a> |
+            <a href="#">VK</a> |
+            <a href="#">Telegram</a>
         </p>
         <p>&copy; 2026 Казаков Илья. Все права защищены.</p>
     </footer>
 
+    <script src="script5.js"></script>
 </body>
 </html>
